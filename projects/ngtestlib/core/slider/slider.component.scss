@@ -1,7 +1,7 @@
 :host {
   .ng-slider-container {
     position: relative;
-    max-width: 300px;
+    min-width: 300px;
     height: 25px;
   }
 

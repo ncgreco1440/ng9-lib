@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public a = Array(15).fill('');
-  public n: number = 75;
+  public n: number = 25;
 }

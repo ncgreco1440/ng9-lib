@@ -10,4 +10,5 @@
   <span>Slider Value: {{ n }}</span>
 </div>
 
-<ng-slider [(ngModel)]="n"></ng-slider>
+<ng-slider [min]="0" [max]="500" [(ngModel)]="n"></ng-slider>
+<input type="number" [(ngModel)]="n">

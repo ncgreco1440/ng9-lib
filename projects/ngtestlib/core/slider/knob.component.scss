@@ -1,0 +1,47 @@
+@function scale($num, $multiplier) {
+  @return $num * $multiplier;
+}
+
+$scale: 0.2;
+
+:host {
+  &.ng-slider-knob-container {
+    &:focus {
+      outline: auto;
+      outline-width: thin;
+      outline-style: dashed;
+    }
+    &:hover:not(.grabbed) {
+      cursor: grab;
+    }
+    &.grabbed {
+      cursor: grabbing;
+    }
+    
+    .ng-slider-knob { 
+      &:after {
+        content: "";
+        position: absolute;
+        top: scale(25, $scale) * 1px;
+        left: scale(-25, $scale) * 1px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: #1c95ff transparent transparent transparent;
+        border-width: scale(70, $scale) * 1px scale(50, $scale) * 1px 0px scale(50, $scale) * 1px;
+      }
+      border-style: solid;
+      border-color: transparent transparent #1c95ff transparent;
+      border-width: 0px scale(25, $scale) * 1px scale(25, $scale) * 1px scale(25, $scale) * 1px;
+      height: 0;
+      width: scale(50, $scale) * 1px;
+      box-sizing: content-box;
+      position: relative;
+    }
+  
+    position: absolute;
+    padding: 16px;
+    margin: -16px;
+    margin-left: -25px;
+  }
+}

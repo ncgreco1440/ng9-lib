@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "build:lib": "ng build @ngtestlib/core --prod",
-    "start": "npm run build:lib && ng serve"
+    "start": "npm run build:lib && ng serve",
+    "dev:ssr": "ng run app:serve-ssr",
+    "serve:ssr": "node dist/app/server/main.js",
+    "build:ssr": "ng build --prod && ng run app:server:production",
+    "prerender": "ng run app:prerender"
   },
   "private": true,
   "dependencies": {
@@ -14,7 +18,10 @@
     "@angular/forms": "~9.0.0",
     "@angular/platform-browser": "~9.0.0",
     "@angular/platform-browser-dynamic": "~9.0.0",
+    "@angular/platform-server": "~9.0.0",
     "@angular/router": "~9.0.0",
+    "@nguniversal/express-engine": "^9.0.0",
+    "express": "^4.15.2",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
@@ -25,6 +32,8 @@
     "@angular/cli": "~9.0.1",
     "@angular/compiler-cli": "github:angular/compiler-cli-builds#3677e447af65474c8ef7aea865194a3db0871d79",
     "@angular/language-service": "~9.0.0",
+    "@nguniversal/builders": "^9.0.0",
+    "@types/express": "^4.17.0",
     "@types/node": "^12.11.1",
     "ng-packagr": "^9.0.0",
     "ts-node": "~8.3.0",

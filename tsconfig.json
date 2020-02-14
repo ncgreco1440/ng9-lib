@@ -21,15 +21,18 @@
     "paths": {
       "@ngtestlib/core": [
         "dist/ngtestlib/core/ngtestlib-core",
-        "dist/ngtestlib/core"
+        "dist/ngtestlib/core",
+        "projects/ngtestlib/core"
       ],
       "@ngtestlib/core/*": [
-        "dist/ngtestlib/core/*"
+        "dist/ngtestlib/core/*",
+        "projects/ngtestlib/core/*"
       ]
     }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
+    "strictInjectionParameters": true,
+    "enableIvy": true
   }
 }
